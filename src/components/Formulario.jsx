@@ -1,10 +1,17 @@
 import Grilla from "./Grilla";
 import { Form, Button } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 
 const Formulario = () => {
+    const coloresLocalStorage=JSON.parse(localStorage.getItem('arregloColoresKey'))||[];
   const [color, setColor] = useState("");
   const [arregloColores, setArregloColores] = useState([]);
+
+  useEffect(()=>{
+
+localStorage.setItem('arregloColoresKey',JSON.stringify(arregloColores))
+  },[arregloColores])
 
   const handleSubmit = (e) => {
     e.preventDefault();
