@@ -1,9 +1,12 @@
 import ItemColor from "./ItemColor";
 import {CardGroup} from 'react-bootstrap';
-const Grilla = () => {
+const Grilla = ({arregloColores}) => {
     return (
       <CardGroup>
-        <ItemColor></ItemColor>
+        {
+          arregloColores.map((color, posicion)=> <ItemColor key={posicion} nombreColor={color}></ItemColor>)
+        }
+       
       </CardGroup>
     );
 };
