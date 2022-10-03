@@ -3,6 +3,7 @@ import { Form, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 
 
+
 const Formulario = () => {
     const coloresLocalStorage=JSON.parse(localStorage.getItem('arregloColoresKey'))||[];
   const [color, setColor] = useState("");

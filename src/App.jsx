@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import Formulario from './components/Formulario'
+import './style.css'
 
 
 function App() {
