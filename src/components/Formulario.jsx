@@ -12,6 +12,11 @@ const Formulario = () => {
     setColor('');
   };
 
+  const borrarColor=(color)=>{
+    let arregloModificado = arregloColores.filter((item)=>(item !== color));
+    setArregloColores(arregloModificado)
+  }
+
   return (
     <div>
       <Form onSubmit={handleSubmit}>
@@ -28,7 +33,7 @@ const Formulario = () => {
           </Button>
         </Form.Group>
       </Form>
-      <Grilla arregloColores={arregloColores}></Grilla>
+      <Grilla arregloColores={arregloColores} borrarColor={borrarColor}></Grilla>
     </div>
   );
 };
